@@ -1,11 +1,12 @@
 "use client";
 
-import { useContactsContext } from "../contexts/ContactsContext";
-import { useFilter } from "../hooks/useFilter";
-import { useStatistics } from "../hooks/useStatistics";
+import { useContactsContext } from "./contexts/ContactsContext";
+import { useFilter } from "./hooks/useFilter";
+import { useStatistics } from "./hooks/useStatistics";
 import FilterInput from "./components/FilterInput";
 import Statistics from "./components/Statistics";
 import ContactList from "./components/ContactList";
+
 
 export default function HomePage() {
   const { contacts, loading, error } = useContactsContext();

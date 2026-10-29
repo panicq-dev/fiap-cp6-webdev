@@ -1,3 +1,5 @@
+"use client";
+
 import {
     createContext,
     useContext,
@@ -5,7 +7,9 @@ import {
     useEffect,
     useCallback,
 } from "react";
-import contactsApi from "../services/contactsApi";
+
+import contactsApi from "../services/ContactsApi.js";
+
 
 const ContactsContext = createContext();
 
@@ -28,10 +32,11 @@ export const ContactsProvider = ({ children }) => {
         try {
             setLoading(true);
             setError(null);
-            const response = await contactsApi.get("/usuario");
+            const response = await contactsApi.get("/users");
             setContacts(response.data);
         } catch (err) {
             setError("Falha ao carregar contatos");
+            console.log(err)
             setContacts([]);
         } finally {
             setLoading(false);
@@ -39,7 +44,7 @@ export const ContactsProvider = ({ children }) => {
     }, []);
 
     useEffect(() => {
-        // TODO: carregar contatos ao iniciar
+        fetchContacts();
     }, [fetchContacts]);
 
     const getContactById = useCallback(
@@ -50,7 +55,7 @@ export const ContactsProvider = ({ children }) => {
     );
 
     return (
-        <ContactsContext.Provider value={{ contacts, loading, error }}>
+        <ContactsContext.Provider value={{ contacts, loading, error, getContactById, fetchContacts }}>
             {children}
         </ContactsContext.Provider>
     );

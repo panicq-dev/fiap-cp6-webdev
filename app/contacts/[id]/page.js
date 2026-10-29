@@ -3,7 +3,7 @@
 import { Suspense } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { useContactsContext } from "../../../contexts/ContactsContext";
+import { useContactsContext } from "../../contexts/ContactsContext";
 
 function ContactDetailContent() {
     const params = useParams();

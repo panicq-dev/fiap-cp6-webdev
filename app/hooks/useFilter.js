@@ -11,7 +11,7 @@ export function useFilter(items = []) {
         const term = query.trim().toLowerCase();
         if (!term) return items;
         return items.filter((item) =>
-            String(item.username || "")
+            String(item.name || "")
                 .toLowerCase()
                 .includes(term)
         );

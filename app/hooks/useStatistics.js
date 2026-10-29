@@ -9,7 +9,7 @@ export function useStatistics(filteredItems = []) {
     return useMemo(
         () => ({
             total: contacts.length,
-            filtered: contacts.length,
+            filtered: filteredItems.length,
         }),
         [contacts, filteredItems]
     );

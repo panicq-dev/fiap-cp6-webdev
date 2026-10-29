@@ -1,5 +1,5 @@
 # Participantes
 
-- Gabriel Almeida - rm
-- Kaue Tsuyoshi - rm 571192
-- Roberto Dantas - rm 566716
+- Gabriel Almeida - RM 573690
+- Kaue Tsuyoshi - RM 571192
+- Roberto Dantas - RM 566716

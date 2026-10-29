@@ -11,7 +11,7 @@ function ContactDetailContent() {
 
     if (loading) return <p>Carregando...</p>;
 
-    const contact = getContactById(params.contactId);
+    const contact = getContactById(params["id"]);
 
     if (!contact) {
         return (

@@ -15,6 +15,7 @@ const ContactsContext = createContext();
 
 export const useContactsContext = () => {
     const context = useContext(ContactsContext);
+
     if (!context) {
         throw new Error(
             "useContactsContext deve ser usado dentro de ContactsProvider"
@@ -33,6 +34,7 @@ export const ContactsProvider = ({ children }) => {
             setLoading(true);
             setError(null);
             const response = await contactsApi.get("/users");
+
             setContacts(response.data);
         } catch (err) {
             setError("Falha ao carregar contatos");

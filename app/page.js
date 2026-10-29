@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <main style={{ maxWidth: 720, margin: "40px auto", padding: 16 }}>
       <h1>Contatos</h1>
-      <FilterInput value={query} onChange={setQuery} />
+      <FilterInput value={query} onChange={setQuery} O />
       <Statistics total={stats.total} filtered={stats.filtered} />
       <ContactList contacts={filteredContacts} />
     </main>

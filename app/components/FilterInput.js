@@ -6,7 +6,7 @@ export default function FilterInput({ value, onChange }) {
             <input
                 type="search"
                 placeholder="Filtrar por nome..."
-                value={value}
+                value={value || ""}
                 onChange={(e) => onChange(e.target.value)}
                 style={{ width: "100%", padding: 10, fontSize: 16 }}
             />

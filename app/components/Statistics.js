@@ -8,7 +8,7 @@ export default function Statistics({ total, filtered }) {
                 gap: 24,
                 marginBottom: 16,
                 padding: 12,
-                background: "#f0f0f0",
+                background: "#000000",
                 borderRadius: 8,
             }}
         >
